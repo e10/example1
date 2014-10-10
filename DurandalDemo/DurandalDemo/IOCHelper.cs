@@ -1,18 +1,16 @@
-﻿using Autofac;
+﻿using System.Reflection;
+using System.Web.Http;
+using System.Web.Mvc;
+using Autofac;
 using Autofac.Integration.Mvc;
 using Autofac.Integration.WebApi;
 using DurandalDemo.Model;
 using DurandalDemo.Services;
-using System.Reflection;
-using System.Web.Http;
-using System.Web.Mvc;
 
-namespace DurandalDemo
-{
-    public class IocHelper
-    {
-        public static IContainer CreateContainer()
-        {
+namespace DurandalDemo {
+    public class IocHelper {
+
+        public static IContainer CreateContainer() {
             var builder = new ContainerBuilder();
             builder.RegisterControllers(Assembly.GetExecutingAssembly());
             builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
