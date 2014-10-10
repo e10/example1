@@ -29,6 +29,11 @@
                 success: function (d) {
                     if (!!d.error) { console.log(d.message); }
                     else {
+                        vm.model.ProspectID('');
+                        vm.model.ProspectName('');
+                        vm.model.Closed(false);
+                        vm.model.AdditionalInfo('');
+                        vm.model.ProspectType(1);
                         return router.navigateBack();
                     }
                 },
