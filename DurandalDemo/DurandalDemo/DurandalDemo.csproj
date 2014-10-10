@@ -211,8 +211,14 @@
     <Compile Include="DAL\ProspectContext.cs" />
     <Compile Include="Models\ProspectType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\DataExecutionResult.cs" />
     <Compile Include="Services\DataServiceBase.cs" />
+    <Compile Include="Services\ICreateHandler.cs" />
     <Compile Include="Services\IDataService.cs" />
+    <Compile Include="Services\IDeleteHandler.cs" />
+    <Compile Include="Services\IHandler.cs" />
+    <Compile Include="Services\IService.cs" />
+    <Compile Include="Services\IUpdateHandler.cs" />
     <Compile Include="Services\ProspectService.cs" />
     <Compile Include="Services\ServicesModule.cs" />
     <Compile Include="ViewModels\ProspectCreateViewModel.cs" />
