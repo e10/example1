@@ -7,13 +7,6 @@ using System.Web;
 
 namespace DurandalDemo.DAL
 {
-
-    public interface IProspectRepository : IRepository<Prospect, Guid>
-    {
-        Prospect byId(Guid prospectID);
-        IQueryable<Prospect> ProspectByName(string prospectName);
-    }
-
     public class ProspectRepository : EntityFrameworkBaseRepository<Prospect, Guid>, IProspectRepository
     {
 
@@ -35,7 +28,7 @@ namespace DurandalDemo.DAL
             return All.FirstOrDefault(x => x.ProspectID == prospectID);
         }
 
-        public IQueryable<Prospect> ProspectByName(string prospectName)
+        public IQueryable<Prospect> ByName(string prospectName)
         {
             return All.Where(x => x.ProspectName == prospectName);
         }

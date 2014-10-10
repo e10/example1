@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace DurandalDemo.ViewModels
 {
-    public class ProspectViewModel
+    public class ProspectGridViewModel
     {
         public Guid ProspectID { get; set; }
         public string ProspectName { get; set; }

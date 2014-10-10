@@ -1,15 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using DurandalDemo.Models;
 
-namespace DurandalDemo.ViewModels
+namespace DurandalDemo.Command
 {
-    public class ProspectViewModel
+    public class ProspectCreateCommand : ICreateCommand
     {
         public Guid ProspectID { get; set; }
         public string ProspectName { get; set; }
-        public string ProspectType { get; set; }
+        public ProspectType ProspectType { get; set; }
         public bool Closed { get; set; }
         public string AdditionalInfo { get; set; }
     }

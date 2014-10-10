@@ -1,13 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
-namespace DurandalDemo.DAL
-{
+namespace DurandalDemo.DAL {
+
     public interface IRepository { }
 
-    public interface IRepository<TEntity, in TKey> : IRepository where TEntity : class
-    {
+    public interface IRepository<TEntity, in TKey> : IRepository where TEntity : class {
         TEntity ById(TKey id);
         int Create(TEntity entity); //returns Rows Affected
         int Create(ICollection<TEntity> entity); //returns Rows Affected
@@ -17,9 +15,5 @@ namespace DurandalDemo.DAL
         int Delete(ICollection<TEntity> entities); //returns Rows Affected
         IQueryable<TEntity> All { get; }
         int SaveChanges();
-
     }
-
- 
-
 }

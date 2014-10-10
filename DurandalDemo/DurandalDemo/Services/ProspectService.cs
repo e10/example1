@@ -57,13 +57,13 @@ namespace DurandalDemo.Services
 
         public IQueryable<Prospect> ProspectByName(string name)
         {
-            return _prospectRepository.ProspectByName(name);
+            return _prospectRepository.ByName(name);
         }
 
         
         public new ProspectViewModel byId(Guid id)
         {
-            return _prospectRepository.byId(id).ToProspectViewModels();
+            return _prospectRepository.ById(id).ToProspectViewModels();
         }
 
     }

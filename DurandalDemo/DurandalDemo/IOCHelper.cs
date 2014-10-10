@@ -1,18 +1,11 @@
-﻿using DurandalDemo.Model;
-using DurandalDemo.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Web;
-using System.Web.Http;
-using System.Web.Mvc;
-using System.Reflection;
-using System.Web.Http;
-using System.Web.Mvc;
-using Autofac;
+﻿using Autofac;
 using Autofac.Integration.Mvc;
 using Autofac.Integration.WebApi;
+using DurandalDemo.Model;
+using DurandalDemo.Services;
+using System.Reflection;
+using System.Web.Http;
+using System.Web.Mvc;
 
 namespace DurandalDemo
 {

@@ -22,8 +22,6 @@ namespace DurandalDemo.Controllers
             _service = service;
         }
 
-
-
         [HttpGet, Route]
         public PageResult<ProspectGridViewModel> GetAsOData(ODataQueryOptions<ProspectGridViewModel> options)
         {
@@ -85,14 +83,8 @@ namespace DurandalDemo.Controllers
         [HttpGet, Route("prospecttype")]
         public IList<EnumProspectType> GetTypes()
         {
-            List<EnumProspectType> types = new List<EnumProspectType>();
             var texts = Enum.GetValues(typeof(ProspectType));
-            foreach (var text in texts)
-            {
-                var value = (int)Enum.Parse(typeof(ProspectType), text.ToString());
-                types.Add( new EnumProspectType{ID = value, Label = text.ToString()});
-            }
-            return types;
+            return (from object text in texts let value = (int) Enum.Parse(typeof (ProspectType), text.ToString()) select new EnumProspectType {ID = value, Label = text.ToString()}).ToList();
         }
 
         public class EnumProspectType
@@ -100,9 +92,5 @@ namespace DurandalDemo.Controllers
             public int ID { get; set; }
             public string Label { get; set; }
         }
-
-
     }
-
-
 }

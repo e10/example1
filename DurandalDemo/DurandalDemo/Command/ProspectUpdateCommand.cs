@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using DurandalDemo.Models;
 
-namespace DurandalDemo.Models
+namespace DurandalDemo.Command
 {
-    public class Prospect
+    public class ProspectUpdateCommand : IUpdateCommand<Guid>
     {
-        public Guid ProspectID { get; set; }
+        public Guid ID { get; set; }
         public string ProspectName { get; set; }
         public ProspectType ProspectType { get; set; }
         public bool Closed { get; set; }
