@@ -41,7 +41,7 @@
                     if (!!d.error) { console.log(d.message); }
                     else {
                         console.log(d);
-                        return router.navigateBack();
+                        return router.navigate('#');
                     }
                 },
             });
