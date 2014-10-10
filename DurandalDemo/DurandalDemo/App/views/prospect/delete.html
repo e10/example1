@@ -1,0 +1,35 @@
+﻿<form data-bind="with:model" class="form-horizontal" role="form">
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Prospect Name</label>
+        <div class="col-sm-10">
+            <p class="form-control-static" data-bind="text:ProspectName"></p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Prospect Type</label>
+        <div class="col-sm-10">
+            <p class="form-control-static" data-bind="text:ProspectType"></p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Closed</label>
+        <div class="col-sm-10">
+            <p class="form-control-static" data-bind="text:Closed"></p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Additional Information</label>
+        <div class="col-sm-10">
+            <p class="form-control-static" data-bind="text:AdditionalInfo"></p>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-2 control-label"></div>
+        <div class="form-group col-sm-10">
+            <button type="button" class="btn btn-default" data-bind="click: $parent.NavBack">Cancel</button>
+            <button type="button" class="btn btn-primary" data-bind="click: $parent.trash">Delete</button>
+        </div>
+    </div>
+    
+</form>
+

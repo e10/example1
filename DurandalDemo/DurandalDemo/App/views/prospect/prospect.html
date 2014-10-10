@@ -1,0 +1,20 @@
+﻿<section>
+    <div data-k-bind="source: source" 
+         data-k-role='grid'
+         data-k-pager="true"
+         data-k-column-menu="{}"
+         data-k-resizable="true"
+         data-k-reorderable="true"
+         data-k-stretch="true"
+         data-k-sortable="true"
+         data-k-filterable="true"
+         data-k-editable="popup"
+         data-k-toolbar="[{name: 'add',template: '&lt;a class=\'k-button k-button-icontext \' href=\'\\#prospect/create\'&gt;&lt;span class=\'k-icon k-add\'&gt;&lt;/span&gt;Add New Prospect&lt;/a&gt;'}]"
+         data-k-pageable="{refresh: true,buttonCount: 5}"
+         data-k-columns="[
+        { 'field': 'ProspectName','title': 'Prospect Name','width': 270 },
+        { 'field': 'ProspectType','title': 'Prospect Type' },
+        { 'field': 'AdditionalInfo','title': 'Additional Information' },
+        { 'field': '', template:'&lt;div class=\'btn-group\'&gt;&lt;a class=\'btn btn-default\' href=\'\\#prospect/edit/#: ProspectID #\'&gt;&lt;i class=\'fa fa-edit\'&gt;&lt;/i&gt;&lt;/a&gt;&lt;a class=\'btn btn-default\' href=\'\\#prospect/delete/#: ProspectID #\'&gt;&lt;i class=\'fa fa-trash-o\'&gt;&lt;/i&gt;&lt;/a&gt;&lt;/div&gt;'}]">
+    </div>
+</section>

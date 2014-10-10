@@ -1,0 +1,35 @@
+﻿<section>
+    <form data-bind="with:model" class="form single-col" role="form">
+
+        <div class="form-group">
+            <label>Prospect Name</label>
+            <input type="text" class="form-control" required data-bind="value:ProspectName" name="Prospect Name" maxlength="100" />
+        </div>
+
+        <div class="form-group">
+            <label>Prospect Type</label>
+            <select class="form-control" data-bind="options:$parent.types,value:ProspectType, optionsText:'Label',optionsValue:'ID'"></select>
+        </div>
+
+        <div class="form-group">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" data-bind="checked:Closed"> Closed
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Additional Information</label>
+            <textarea class="form-control" data-bind="value:AdditionalInfo" name="AdditionalInfo" maxlength="200" />
+        </div>
+        <button type="button" class="btn btn-default" data-bind="click: $parent.NavBack">Cancel</button>
+        <button class="btn btn-primary" data-bind="click:$parent.save"><i class="fa fa-save"></i> Update</button>
+
+        </div>
+        <link href="../Content/kendo/kendo.common.min.css" rel="stylesheet" />
+        <link href="../Content/kendo/kendo.default.min.css" rel="stylesheet" />
+        <link href="../Content/kendo/kendo.dataviz.min.css" rel="stylesheet" />
+
+</section>
+
